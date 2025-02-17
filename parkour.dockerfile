@@ -65,11 +65,8 @@ RUN cd extreme-parkour/rsl_rl && pip install -e .
 RUN cd extreme-parkour/legged_gym && pip install -e .
 RUN pip install "numpy<1.24" pydelatin wandb tqdm opencv-python ipdb pyfqmr flask
 
-# # Copy requirements.txt into the container
-# COPY requirements.txt requirements.txt
-
-# # Install Python dependencies
-# RUN pip install -r requirements.txt
+# now install python modules for the main motion-predictor repo
+RUN pip install hydra-core py_lz4framed dill elements
 
 # Setup entry point to activate virtual environment
 COPY entrypoint.sh /entrypoint.sh

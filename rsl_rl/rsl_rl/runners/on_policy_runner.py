@@ -117,7 +117,6 @@ class OnPolicyRunner:
         self.tot_time = 0
         self.current_learning_iteration = 0
         
-
     def learn_RL(self, num_learning_iterations, init_at_random_ep_len=False):
         mean_value_loss = 0.
         mean_surrogate_loss = 0.
