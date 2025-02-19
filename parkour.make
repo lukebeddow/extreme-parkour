@@ -33,7 +33,7 @@ help:
 # define the files to mount in the docker container (and add permissions)
 MOUNT = -v $(PWD)/$(WORKDIR):/workspace/$(WORKDIR)/ \
 				-v $(PWD)/$(CONFDIR):/workspace/$(CONFDIR)/ \
-				-v $(PWD)/$(OUTDIR):/workspace/$(OUTDIR)/ \
+				-v $(PWD)/$(OUTDIR):/workspace/$(OUTDIR)/:rw \
 				--env-file $(WANDB)
 
 # ----- command definitions ----- #

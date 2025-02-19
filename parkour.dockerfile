@@ -66,7 +66,7 @@ RUN cd extreme-parkour/legged_gym && pip install -e .
 RUN pip install "numpy<1.24" pydelatin wandb tqdm opencv-python ipdb pyfqmr flask
 
 # now install python modules for the main motion-predictor repo
-RUN pip install hydra-core py_lz4framed dill elements
+RUN pip install hydra-core py_lz4framed dill elements mediapy
 
 # Setup entry point to activate virtual environment
 COPY entrypoint.sh /entrypoint.sh
